@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react'
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
+
 const Translator = () => {
     const [data_val, setdata_val] = useState("");
     const [Lnag, setLnag] = useState("hi")
@@ -10,9 +11,8 @@ const Translator = () => {
 
     const make_req = async (e) => {
         e.preventDefault();
-
-        const key = '588f33b5124b471f9aad59e51295e32e';
-        const region = 'centralindia';
+        const key = import.meta.env.VITE_KEY;
+        const region = import.meta.env.VITE_REGION;
         const endpoint = 'https://api.cognitive.microsofttranslator.com';
         const url = `${endpoint}/translate`;
 
