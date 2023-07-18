@@ -37,7 +37,7 @@ const Dictionary = () => {
         <div className='mx-[45px] mt-[10px]'>
             <h1 className='text-4xl mb-4 text-teal-600 font-bold'>Dictionary</h1>
             <form action="" onSubmit={make_req}>
-                <input className='border-b-2 m-3 focus:border-teal-600 text-lg outline-none' type="text" value={data} onChange={e => setdata(e.target.value)} />
+                <input className='border-b-2 m-3 focus:border-teal-600 text-lg outline-none' placeholder='Search in English...' type="text" value={data} onChange={e => setdata(e.target.value)} />
                 <button onClick={() => { if (data.length == 0) { alert("Please Enter Some Text") } }} className='bg-blue-900 text-white px-4 p-2 rounded-2xl shadow-lg mr-3' type='submit'>Search</button>
                 <button className='bg-blue-900 text-white px-4 p-2 rounded-2xl shadow-lg' onClick={() => { setdata(""), setAns({}) }}>New word</button>
             </form>
